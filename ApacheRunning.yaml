@@ -1,0 +1,10 @@
+# This playbook checks that Apache is Running and if it is not then it starts it.
+
+---
+- hosts: linux
+  sudo: yes
+  tasks:
+    - name: Ensure httpd is running and if it's not start it
+      service:
+        name: httpd
+        state: started
