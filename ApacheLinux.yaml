@@ -1,0 +1,11 @@
+# This playbook installs Apache on a Linux Server.
+# Targets applied to all servers in the LINUX group under the hosts file.
+
+---
+- hosts: linux
+  sudo: yes
+  tasks:
+    - name: Install apache httpd but avoid starting it immeditely
+      yum:
+        name: httpd
+        state: latest
