@@ -2,7 +2,8 @@
 # Targets applied to all servers in the LINUX group under the hosts file.
 
 ---
-- hosts: Linux
+- name: Install Apache on Linux VM
+  hosts: Linux
   sudo: yes
   tasks:
     - name: Install apache httpd but avoid starting it immeditely
