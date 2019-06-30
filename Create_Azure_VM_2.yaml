@@ -1,3 +1,5 @@
+---
+- name: Create Azure VM 2
   hosts: localhost
   connection: local
   tasks:
