@@ -4,7 +4,9 @@
 ---
 - name: Install Apache on Linux VM
   hosts: all
-  sudo: yes
+  #sudo: yes
+  become: yes
+  become_method: sudo
   tasks:
     - name: Install apache httpd but avoid starting it immeditely
       yum:
