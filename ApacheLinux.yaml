@@ -3,7 +3,7 @@
 
 ---
 - name: Install Apache on Linux VM
-  hosts: Linux
+  hosts: all
   sudo: yes
   tasks:
     - name: Install apache httpd but avoid starting it immeditely
