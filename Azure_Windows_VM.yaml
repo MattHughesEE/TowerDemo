@@ -50,7 +50,7 @@
       subnet_name: mySubnet
 
   - name: CREATE AZURE VM EXTENSION TO ENABLE HTTPS WINRM LISTENER
-    azure_rm_virtualmachine_extension:
+    azure_rm_virtualmachineextension:
       subscription_id: "{{ my_subscription_id }}"
       client_id: "{{ my_client_id }}"
       secret: "{{ my_secret }}"
@@ -58,20 +58,20 @@
       admin_username: matthew
       admin_password: "{{ my_admin_password }}"
       cert_validation_mode: ignore
-      os_type: Windows
-      image:
-        offer: WindowsServer
-        publisher: MicrosoftWindowsServer
-        sku: 2016-Datacenter
-        version: latest
+      #os_type: Windows
+      #image:
+        #offer: WindowsServer
+       #publisher: MicrosoftWindowsServer
+        #sku: 2016-Datacenter
+        #version: latest
       name: "{{ my_vm_name }}"
       resource_group: "{{ my_resource_group }}"
       state: present
-      vm_size: Standard_B2s
+      #vm_size: Standard_B2s
 #      vm_size: Standard_D1
-      storage_account_name: "{{ my_vm_name }}"
-      virtual_network_name: myVnet
-      subnet_name: mySubnet
+      #storage_account_name: "{{ my_vm_name }}"
+      #virtual_network_name: myVnet
+      #subnet_name: mySubnet
 
   - name: WAIT FOR WINRM TO GO ONLINE
     wait_for:
