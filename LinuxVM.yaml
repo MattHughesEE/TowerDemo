@@ -3,7 +3,7 @@
   hosts: localhost
   connection: local
   vars:
-    resource_group: TestResourceGroup
+    resource_group: TestResourceGroup1
   tasks:
   - name: Create resource group
     azure_rm_resourcegroup:
