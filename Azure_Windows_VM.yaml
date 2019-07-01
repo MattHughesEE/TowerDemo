@@ -74,7 +74,7 @@
       subnet_name: mySubnet
 
   - name: CREATE AZURE VM EXTENSION TO ENABLE HTTPS WINRM LISTENER
-    azure_rm_virtualmachine_extension:
+    azure_rm_virtualmachineextension:
       name: myvmExtension
       location: eastus
       resource_group: TestResourceGroup
