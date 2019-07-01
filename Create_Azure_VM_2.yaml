@@ -11,7 +11,7 @@
     azure_rm_virtualnetwork:
       resource_group: TestResourceGroup
       name: myVnet
-      address_prefixes: "10.0.0.0/16"
+      address_prefixes: "10.0.0.0/12"
   - name: Add subnet
     azure_rm_subnet:
       resource_group: TestResourceGroup
