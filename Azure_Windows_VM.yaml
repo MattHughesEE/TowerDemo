@@ -73,7 +73,7 @@
       #virtual_network_name: myVnet
       #subnet_name: mySubnet
   - name: Create VM Extension
-    azure_rm_virtualmachineextension:
+    azure_rm_virtualmachine_extension:
       name: myvmextension
       location: eastus
       resource_group: TestResourceGroup
