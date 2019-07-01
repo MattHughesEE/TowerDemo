@@ -75,16 +75,13 @@
 
   - name: CREATE AZURE VM EXTENSION TO ENABLE HTTPS WINRM LISTENER
     azure_rm_virtualmachine_extension:
-      subscription_id: "{{ my_subscription_id }}"
-      client_id: "{{ my_client_id }}"
-      secret: "{{ my_secret }}"
-      tenant: "{{ my_tenant }}"
-      name: winrm-extension
-      resource_group: "{{ my_resource_group }}"
+      name: myvmExtension
+      location: eastus
+      resource_group: TestResourceGroup
       virtual_machine_name: "{{ my_vm_name }}"
-      publisher: Microsoft.Compute
-      virtual_machine_extension_type: CustomScriptExtension
-      type_handler_version: 1.9
+      publisher: Microsoft.Azure.Extensions
+      virtual_machine_extension_type: CustomScript
+      type_handler_version: 2.0
       settings: '{"commandToExecute": "powershell.exe -ExecutionPolicy ByPass -EncodedCommand {{winrm_enable_script}}"}'
       auto_upgrade_minor_version: true
 
